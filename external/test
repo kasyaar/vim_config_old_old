@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+[ -f ~/.vim/manual/php/function.mysql-query.html ] && echo 1

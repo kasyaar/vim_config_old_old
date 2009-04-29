@@ -90,7 +90,6 @@ set makeprg=php\ -i\ %
 setlocal dictionary+=~/.vim/dic/phpfunclist
 setlocal dictionary+=~/.vim/dic/php/funclist
 setlocal dictionary+=~/.vim/dic/phpproto
-setlocal keywordprg=$HOME/.vim/external/phpmanual.sh
 
 let php_sql_query=1
 let php_htmlInStrings=1

@@ -66,8 +66,6 @@ imap <c-c>n <esc>:bn<cr>i
 
 "shell
 map <c-c>s :shell<cr>
-vmap <c-c>s <esc>:w<cr>:shell<cr>i
-imap <c-c>s <esc>:w<cr>:shell<cr>i
 
 "keyboard shortcuts
 nmap <Leader>p :NERDTreeToggle<cr>

@@ -15,9 +15,10 @@ set cpo-=C
 let s:undo_ftplugin = ""
 let s:browsefilter = "HTML Files (*.html, *.htm)\t*.html;*.htm\n" .
 	    \	     "All Files (*.*)\t*.*\n"
+"make
 let s:match_words = ""
 
-runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
+"runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
 let b:did_ftplugin = 1
 
 " Override our defaults if these were set by an included ftplugin.
@@ -82,7 +83,7 @@ let b:undo_ftplugin = "setlocal commentstring< include< omnifunc<" .
 let &cpo = s:save_cpo
 
 "проверка синтаксиса
-set makeprg=php\ -i\ %
+set makeprg=php\ -l\ %
 "формат вывода ошибок PHP
  set errorformat=%m\ in\ %f\ on\ line\ %l
 

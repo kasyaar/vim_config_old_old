@@ -20,7 +20,7 @@ exec "Snippet ifelse if ( ".st."condition".et." )<CR>{<CR>".st.et."<CR>}<CR>else
 exec "Snippet $_ $_REQUEST['".st."variable".et."']<CR>".st.et
 exec "Snippet case case '".st."variable".et."':<CR>".st.et."<CR>break;<CR>".st.et
 exec "Snippet print print \"".st."string".et."\"".st.et.";".st.et."<CR>".st.et
-exec "Snippet function ".st."public ".et."function ".st."FunctionName".et." (".st.et.")<CR>{<CR>".st.et."<CR>}<CR>".st.et
+exec "Snippet function ".st."public".et." function ".st."FunctionName".et." (".st.et.")<CR>{<CR>".st.et."<CR>}<CR>".st.et
 exec "Snippet if if ( ".st."condition".et." )<CR>{<CR>".st.et."<CR>}<CR>".st.et
 exec "Snippet else else<CR>{<CR>".st.et."<CR>}<CR>".st.et
 exec "Snippet array $".st."arrayName".et." = array( '".st.et."',".st.et." );".st.et

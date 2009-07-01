@@ -31,5 +31,7 @@ exec "Snippet while while ( ".st.et." )<CR>{<CR>".st.et."<CR>}<CR>".st.et
 
 
 exec "Snippet dd echo '<PRE>'.print_r( ".st."variable".et." , true).'</PRE>';"
+exec "Snippet terr trigger_error('".st."caption".et":'.var_export(".st."variable".et." , true));"
+exec "Snippet lerr LoggerManager::getLogger('main')->debug('".st."caption".et":'.var_export(".st."variable".et." , true));"
 exec "Snippet lm echo print_r(  __METHOD__.':'.__LINE__.':'.".st."variable".et." , true).\"\\n\";"
 exec "Snippet tdd <?php echo '<PRE>'.print_r( ".st."variable".et." , true).'</PRE>'; ?>"

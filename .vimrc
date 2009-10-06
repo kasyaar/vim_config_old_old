@@ -12,7 +12,7 @@ set smartindent
 " Не выгружать буферы при переключении
 set hidden
 syntax on
-set spell
+"set spell
 set spelllang=ru,en
 
 set termencoding=utf8

@@ -48,6 +48,10 @@ filetype indent on
 " Включаем filetype плугин. Настройки, специфичные для определынных файлов мы разнесём по разным местам
 filetype plugin on
 au BufRead,BufNewFile *.phps    set filetype=php
+au BufRead,BufNewFile *.zsh    set filetype=zsh
+au BufRead,BufNewFile *.conf    set filetype=apache
+au BufRead,BufNewFile *.htaccess    set filetype=apache
+
 "mapping for vcs plugin
 nmap <c-c>c :VCSCommit<cr>
 nmap <c-c>a :VCSAdd<cr>

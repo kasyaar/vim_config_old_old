@@ -83,9 +83,12 @@ nmap <c-c>; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 set pastetoggle=<Leader>v
 
 
-fu! RebuildTags()
+fu! RebuildCSTags()
     let out = system("find . -name '*.php' > ./cscope.files && cscope -b")
     cs reset
+endf
+fu! RebuildTags()
+    :!ctags -R -a
 endf
 fu! LoginTwitter()
     let a:user=input("Your twitter login: ")
@@ -102,3 +105,8 @@ imap <unique> <C-j> <Plug>Jumper
 nmap <c-t>p :PosttoTwitter<cr>
 nmap <c-t>f :FriendsTwitter<cr>
 nmap <c-t>l :Twil<cr>
+
+let Tlist_Ctags_Cmd = "ctags"
+let Tlist_WinWidth = 50
+nmap <leader>l :TlistToggle<cr>
+

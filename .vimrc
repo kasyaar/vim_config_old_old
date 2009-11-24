@@ -52,6 +52,7 @@ au BufRead,BufNewFile *.zsh    set filetype=zsh
 au BufRead,BufNewFile *.conf    set filetype=apache
 au BufRead,BufNewFile *.htaccess    set filetype=apache
 autocmd FileType html source ~/.vim/plugin/sparkup.vim
+autocmd FileType xml source ~/.vim/plugin/sparkup.vim
 
 "mapping for vcs plugin
 nmap <c-c>c :VCSCommit<cr>

@@ -51,6 +51,7 @@ au BufRead,BufNewFile *.phps    set filetype=php
 au BufRead,BufNewFile *.zsh    set filetype=zsh
 au BufRead,BufNewFile *.conf    set filetype=apache
 au BufRead,BufNewFile *.htaccess    set filetype=apache
+autocmd FileType html source ~/.vim/plugin/sparkup.vim
 
 "mapping for vcs plugin
 nmap <c-c>c :VCSCommit<cr>
@@ -109,4 +110,6 @@ nmap <c-t>l :Twil<cr>
 let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
 nmap <leader>l :TlistToggle<cr>
-
+set bs=2
+set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 

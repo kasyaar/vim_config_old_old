@@ -1,1 +1,2 @@
-backup
+backup/*
+plugin/.DS_Store

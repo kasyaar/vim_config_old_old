@@ -80,6 +80,11 @@ nmap <Leader>p :NERDTreeToggle<cr>
 vmap <Leader>p <esc>:NERDTreeToggle<cr>i
 imap <Leader>p <esc>:NERDTreeToggle<cr>i
 
+nmap <c-d>b :Bp<cr>
+vmap <c-d> <esc>:Bp<cr>i
+imap <c-d> <esc>:Bp<cr>i
+
+
 nmap <c-c>; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 
 set pastetoggle=<Leader>v
@@ -114,3 +119,4 @@ nmap <leader>l :TlistToggle<cr>
 set bs=2
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz

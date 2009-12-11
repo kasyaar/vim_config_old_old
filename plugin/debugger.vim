@@ -136,6 +136,7 @@ map <Leader>dr :python debugger_resize()<cr>
 map <Leader>di :python debugger_command('step_into')<cr>
 map <Leader>do :python debugger_command('step_over')<cr>
 map <Leader>dt :python debugger_command('step_out')<cr>
+map <Leader>rd 40<C-W>><C-W>l<C-W>J 
 
 nnoremap ,e :python debugger_watch_input("eval")<cr>A
 

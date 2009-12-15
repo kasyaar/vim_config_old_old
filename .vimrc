@@ -1,3 +1,4 @@
+"start of vimrc
 set nocompatible 
 set nowrap
 set tabstop=4

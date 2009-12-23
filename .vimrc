@@ -1,5 +1,7 @@
-"start of vimrc
+"Не совместимый с vi
 set nocompatible 
+"Подсвечивать найденный фрагменты
+set hlsearch
 set nowrap
 set tabstop=4
 set shiftwidth=4
@@ -48,6 +50,10 @@ set sessionoptions=curdir,buffers,tabpages
 filetype indent on
 " Включаем filetype плугин. Настройки, специфичные для определынных файлов мы разнесём по разным местам
 filetype plugin on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+
 au BufRead,BufNewFile *.phps    set filetype=php
 au BufRead,BufNewFile *.zsh    set filetype=zsh
 au BufRead,BufNewFile *.conf    set filetype=apache
@@ -81,9 +87,26 @@ nmap <Leader>p :NERDTreeToggle<cr>
 vmap <Leader>p <esc>:NERDTreeToggle<cr>i
 imap <Leader>p <esc>:NERDTreeToggle<cr>i
 
+"debugger shortcuts
 nmap <c-d>b :Bp<cr>
 vmap <c-d> <esc>:Bp<cr>i
 imap <c-d> <esc>:Bp<cr>i
+"fuzzy shortcuts
+nmap <Leader>ff :FufFile<cr>
+vmap <Leader>ff :FuaFileFilef<cr>
+imap <Leader>ff :FufFileFile<cr>
+
+nmap <Leader>fd :FufDir<cr>
+vmap <Leader>fd :FufDir<cr>
+imap <Leader>fd :FufDir<cr>
+
+nmap <Leader>fb :FufBuffer<cr>
+vmap <Leader>fb :FufBuffer<cr>
+imap <Leader>fb :FufBuffer<cr>
+
+nmap <Leader>fmf :FufMruFile<cr>
+vmap <Leader>fmf :FufMruFile<cr>
+imap <Leader>fmf :FufMruFile<cr>
 
 
 nmap <c-c>; :%s/\<<c-r>=expand("<cword>")<cr>\>/
@@ -105,7 +128,8 @@ fu! LoginTwitter()
     echo "Credentials are saved"
 endf
 command! Twil :call LoginTwitter()
-nmap <Leader>r :call RebuildTags()<cr>
+nmap <Leader>rc :call RebuildTags()<cr>
+nmap <Leader>r :call RebuildCSTags()<cr>
 color  torte
 "установки для плагина снипетов
 imap <unique> <C-j> <Plug>Jumper
@@ -117,6 +141,7 @@ nmap <c-t>l :Twil<cr>
 let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
 nmap <leader>l :TlistToggle<cr>
+nmap <leader>lo :TlistOpen<cr>
 set bs=2
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 

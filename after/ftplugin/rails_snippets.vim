@@ -52,3 +52,7 @@ exec "Snippet rps render :partial => \"".st."item".et."\", :status => ".st.et
 exec "Snippet ril render :inline => \"".st.et."\", :locals => { ".st.et." => \"".st."value".et."\"".st.et." }".st.et
 exec "Snippet rtl render :text => \"".st.et."\", :layout => \"".st.et."\"".st.et
 exec "Snippet reca redirect_to :controller => \"".st."items".et."\", :action => \"".st."list".et."\"".st.et
+
+exec "Snippet ffor <% form_for([".st."items".et."]) do |f| %><CR>".st.et."<CR><% end %><CR>".st.et
+exec "Snippet eqt <%= ".st."content".et." %><CR>".st.et
+exec "Snippet li <%= link_to '".st."name".et."', ".st."".et." %><CR>".st.et

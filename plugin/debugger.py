@@ -494,10 +494,10 @@ class DebugUI:
 
   def create(self):
     """ create windows """
-    self.watchwin.create('vertical belowright new')
-    self.helpwin.create('belowright new')
-    self.stackwin.create('belowright new')
+    self.helpwin.create('vertical belowright new ')
+    self.stackwin.create('belowright new ')
     self.tracewin.create('belowright new')
+    self.watchwin.create('botright new')
 
   def set_highlight(self):
     """ set vim highlight of debugger sign """

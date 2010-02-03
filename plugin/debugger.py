@@ -411,6 +411,7 @@ class HelpWindow(VimWindow):
   def __init__(self, name = 'HELP__WINDOW'):
     VimWindow.__init__(self, name)
   def on_create(self):
+    vim.command("vertical resize 40")
     self.write(                                                          \
         '[ Function Keys ]                 |                       \n' + \
         '  <F1>   resize                   | [ Normal Mode ]       \n' + \

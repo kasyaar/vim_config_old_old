@@ -3,3 +3,7 @@ let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAd
 call NERDTreeAddKeyMap(opts)
 let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
 call NERDTreeAddKeyMap(opts)
+let opts = {'key': 'm', 'quickhelpText': 'move node', 'callback': 'NERDTreeMoveNode'}
+call NERDTreeAddKeyMap(opts)
+let opts = {'key': 'c', 'quickhelpText': 'copy node', 'callback': 'NERDTreeCopyNode'}
+call NERDTreeAddKeyMap(opts)

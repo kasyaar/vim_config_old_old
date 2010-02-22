@@ -53,11 +53,13 @@ filetype plugin on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
+set autoread
 
 au BufRead,BufNewFile *.phps    set filetype=php
 au BufRead,BufNewFile *.zsh    set filetype=zsh
 au BufRead,BufNewFile *.conf    set filetype=apache
 au BufRead,BufNewFile *.htaccess    set filetype=apache
+au BufRead,BufNewFile *.dryml    set filetype=xml
 autocmd FileType html source ~/.vim/plugin/sparkup.vim
 autocmd FileType xml source ~/.vim/plugin/sparkup.vim
 
@@ -115,7 +117,7 @@ set pastetoggle=<Leader>v
 
 
 fu! RebuildCSTags()
-    let out = system("find . -name '*.php' > ./cscope.files && cscope -b")
+    let out = system("find . -name '*.*' > ./cscope.files && cscope -b")
     cs reset
 endf
 fu! RebuildTags()

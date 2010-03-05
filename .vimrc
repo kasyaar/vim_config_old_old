@@ -59,7 +59,6 @@ au BufRead,BufNewFile *.phps    set filetype=php
 au BufRead,BufNewFile *.zsh    set filetype=zsh
 au BufRead,BufNewFile *.conf    set filetype=apache
 au BufRead,BufNewFile *.htaccess    set filetype=apache
-au BufRead,BufNewFile *.dryml    set filetype=xml
 autocmd FileType html source ~/.vim/plugin/sparkup.vim
 autocmd FileType xml source ~/.vim/plugin/sparkup.vim
 

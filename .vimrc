@@ -127,6 +127,7 @@ endf
 command! Twil :call LoginTwitter()
 nmap <Leader>rc :call RebuildTags()<cr>
 nmap <Leader>r :call RebuildCSTags()<cr>
+nmap <Leader>sm :call ReloadAllSnippets()<cr>
 color  torte
 "установки для плагина снипетов
 imap <unique> <C-j> <Plug>Jumper

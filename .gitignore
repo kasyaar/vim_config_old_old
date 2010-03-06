@@ -2,3 +2,4 @@ backup/*
 tmp/*
 plugin/.DS_Store
 errors
+.VimballRecord

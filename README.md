@@ -1,9 +1,9 @@
-Instalation
+# Instalation #
     cd ~/
     git clone git://github.com/kasyaar/vim_config.git .vim
     cp .vim/.vimrc .
 
-This configuration requires next:
+# Requirements #
     ruby-debug and ruby-debug-ide
         if you dont need it - just remove plugins/ruby_debugger.vim
     +clienserver
@@ -14,6 +14,6 @@ This configuration requires next:
     ctags
         for ctags plugin
 
-What this configuration contains?
+# Content of conficuration #
     to be described
 

@@ -55,8 +55,8 @@ let g:tex_flavor='latex'
 
 set autoread
 
-"set laststatus=2
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 autocmd FileType html source ~/.vim/plugin/sparkup.vim
 autocmd FileType xml source ~/.vim/plugin/sparkup.vim
@@ -68,6 +68,7 @@ nmap <c-c>l :VCSLog<cr>
 nmap <c-c>u :VCSUpdate<cr>
 nmap <c-c>r :VCSRevert<cr>
 nmap <c-c>d :VCSVimDiff<cr>
+nmap <c-c>t :VCSAnnotate<cr>
 "mappings for BufExplorer
 map <c-c>p :bp<cr>
 vmap <c-c>p <esc>:bp<cr>i

@@ -55,8 +55,8 @@ let g:tex_flavor='latex'
 
 set autoread
 
-set laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+"set laststatus=2
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 autocmd FileType html source ~/.vim/plugin/sparkup.vim
 autocmd FileType xml source ~/.vim/plugin/sparkup.vim
@@ -116,7 +116,7 @@ set pastetoggle=<Leader>v
 
 
 fu! RebuildCSTags()
-    let out = system("find . -name '*.*' > ./cscope.files && cscope -b")
+    let out = system("find . -name '*.rb' > ./cscope.files && cscope -b")
     cs reset
 endf
 fu! RebuildTags()

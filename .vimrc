@@ -114,9 +114,13 @@ nmap <c-c>; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 
 set pastetoggle=<Leader>v
 
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
 
 fu! RebuildCSTags()
-    let out = system("find . -name '*.rb' > ./cscope.files && cscope -b")
+    let out = system("find . -name '*.*' > ./cscope.files && cscope -b")
     cs reset
 endf
 fu! RebuildTags()
@@ -133,8 +137,6 @@ nmap <Leader>rc :call RebuildTags()<cr>
 nmap <Leader>r :call RebuildCSTags()<cr>
 nmap <Leader>sm :call ReloadAllSnippets()<cr>
 color  torte
-"установки для плагина снипетов
-imap <unique> <C-j> <Plug>Jumper
 "twittervim mappings
 nmap <c-t>p :PosttoTwitter<cr>
 nmap <c-t>f :FriendsTwitter<cr>

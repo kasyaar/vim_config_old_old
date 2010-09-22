@@ -50,16 +50,22 @@ set sessionoptions=curdir,buffers,tabpages
 filetype indent on
 " Включаем filetype плугин. Настройки, специфичные для определынных файлов мы разнесём по разным местам
 filetype plugin on
+
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd FileType html source ~/.vim/plugin/sparkup.vim
+    autocmd FileType xml source ~/.vim/plugin/sparkup.vim
+endif
+
+
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 set autoread
 
-"set laststatus=2
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
-autocmd FileType html source ~/.vim/plugin/sparkup.vim
-autocmd FileType xml source ~/.vim/plugin/sparkup.vim
 
 "mapping for vcs plugin
 nmap <c-c>c :VCSCommit<cr>
@@ -92,31 +98,12 @@ imap <Leader>p <esc>:NERDTreeToggle<cr>i
 nmap <c-d>b :Bp<cr>
 vmap <c-d> <esc>:Bp<cr>i
 imap <c-d> <esc>:Bp<cr>i
-"fuzzy shortcuts
-nmap <Leader>ff :FufFile<cr>
-vmap <Leader>ff :FuaFileFilef<cr>
-imap <Leader>ff :FufFileFile<cr>
-
-nmap <Leader>fd :FufDir<cr>
-vmap <Leader>fd :FufDir<cr>
-imap <Leader>fd :FufDir<cr>
-
-nmap <Leader>fb :FufBuffer<cr>
-vmap <Leader>fb :FufBuffer<cr>
-imap <Leader>fb :FufBuffer<cr>
-
-nmap <Leader>fmf :FufMruFile<cr>
-vmap <Leader>fmf :FufMruFile<cr>
-imap <Leader>fmf :FufMruFile<cr>
 
 
 nmap <c-c>; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 
 set pastetoggle=<Leader>v
 
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-endif
 
 
 fu! RebuildCSTags()
@@ -126,21 +113,10 @@ endf
 fu! RebuildTags()
     :!ctags -R -a
 endf
-fu! LoginTwitter()
-    let a:user=input("Your twitter login: ")
-    let a:pswd=inputsecret(a:user."'s password: ")
-    let g:twitvim_login=a:user.':'.a:pswd
-    echo "Credentials are saved"
-endf
-command! Twil :call LoginTwitter()
 nmap <Leader>rc :call RebuildTags()<cr>
 nmap <Leader>r :call RebuildCSTags()<cr>
 nmap <Leader>sm :call ReloadAllSnippets()<cr>
 color  torte
-"twittervim mappings
-nmap <c-t>p :PosttoTwitter<cr>
-nmap <c-t>f :FriendsTwitter<cr>
-nmap <c-t>l :Twil<cr>
 
 let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
